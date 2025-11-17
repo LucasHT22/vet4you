@@ -178,8 +178,6 @@ INSERT INTO Pagamento (servico, forma_pagamento, valor, status, data_pagamento, 
 ('Mensalidade', 'Pendente', 250.00, 'n', NULL, 7),
 ('Mensalidade', 'Cartão', 300.00, 's', '2025-10-05', 9);
 
-UPDATE Pagamento SET status = 's', data_pagamento = CURDATE(), forma_pagamento = 'PIX' WHERE id_paciente = 7;
-
 SELECT * FROM Pagamento;
 
 SELECT id_paciente, nome FROM Paciente;
