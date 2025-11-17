@@ -141,43 +141,41 @@ CREATE TABLE Pagamento (
     FOREIGN KEY (id_paciente) REFERENCES Paciente(id_paciente)
 );
 
+-- Valores para Testes:
+
 -- Insere 10 usuários (donos dos pets).
-INSERT INTO Usuario (nome, telefone, email, username, password, isAdmin, cpf, isActive) VALUES
-('Ana Silva', '111111111', 'p1@email.com', 'user1', 'pass1', 'n', '111.111.111-11', 's'),
-('Bruno Costa', '222222222', 'p2@email.com', 'user2', 'pass2', 'n', '222.222.222-22', 's'),
-('Carlos Dias', '333333333', 'p3@email.com', 'user3', 'pass3', 'n', '333.333.333-33', 's'),
-('Daniela Souza', '444444444', 'p4@email.com', 'user4', 'pass4', 'n', '444.444.444-44', 's'),
-('Eduardo Lima', '555555555', 'p5@email.com', 'user5', 'pass5', 'n', '555.555.555-55', 's'),
-('Fernanda Alves', '666666666', 'p6@email.com', 'user6', 'pass6', 'n', '666.666.666-66', 's'),
-('Gustavo Pereira', '777777777', 'p7@email.com', 'user7', 'pass7', 'n', '777.777.777-77', 's'),
-('Helena Santos', '888888888', 'p8@email.com', 'user8', 'pass8', 'n', '888.888.888-88', 's'),
-('Igor Martins', '999999999', 'p9@email.com', 'user9', 'pass9', 'n', '999.999.999-99', 's'),
-('Julia Ferreira', '1010101010', 'p10@email.com', 'user10', 'pass10', 'n', '000.000.000-00', 's');
+-- INSERT INTO Usuario (nome, telefone, email, username, password, isAdmin, cpf, isActive) VALUES
+-- ('Ana Silva', '111111111', 'p1@email.com', 'user1', 'pass1', 'n', '111.111.111-11', 's'),
+-- ('Bruno Costa', '222222222', 'p2@email.com', 'user2', 'pass2', 'n', '222.222.222-22', 's'),
+-- ('Carlos Dias', '333333333', 'p3@email.com', 'user3', 'pass3', 'n', '333.333.333-33', 's'),
+-- ('Daniela Souza', '444444444', 'p4@email.com', 'user4', 'pass4', 'n', '444.444.444-44', 's'),
+-- ('Eduardo Lima', '555555555', 'p5@email.com', 'user5', 'pass5', 'n', '555.555.555-55', 's'),
+-- ('Fernanda Alves', '666666666', 'p6@email.com', 'user6', 'pass6', 'n', '666.666.666-66', 's'),
+-- ('Gustavo Pereira', '777777777', 'p7@email.com', 'user7', 'pass7', 'n', '777.777.777-77', 's'),
+-- ('Helena Santos', '888888888', 'p8@email.com', 'user8', 'pass8', 'n', '888.888.888-88', 's'),
+-- ('Igor Martins', '999999999', 'p9@email.com', 'user9', 'pass9', 'n', '999.999.999-99', 's'),
+-- ('Julia Ferreira', '1010101010', 'p10@email.com', 'user10', 'pass10', 'n', '000.000.000-00', 's');
 
 -- Insere 10 cartões/planos.
-INSERT INTO Cartao (plano, validade, titular) VALUES
-(1001, '2026-12-31', 'Ana Silva'), (1002, '2026-12-31', 'Bruno Costa'),
-(1003, '2026-12-31', 'Carlos Dias'), (1004, '2026-12-31', 'Daniela Souza'),
-(1005, '2026-12-31', 'Eduardo Lima'), (1006, '2026-12-31', 'Fernanda Alves'),
-(1007, '2026-12-31', 'Gustavo Pereira'), (1008, '2026-12-31', 'Helena Santos'),
-(1009, '2026-12-31', 'Igor Martins'), (1010, '2026-12-31', 'Julia Ferreira');
+-- INSERT INTO Cartao (plano, validade, titular) VALUES
+-- (1001, '2026-12-31', 'Ana Silva'), (1002, '2026-12-31', 'Bruno Costa'),
+-- (1003, '2026-12-31', 'Carlos Dias'), (1004, '2026-12-31', 'Daniela Souza'),
+-- (1005, '2026-12-31', 'Eduardo Lima'), (1006, '2026-12-31', 'Fernanda Alves'),
+-- (1007, '2026-12-31', 'Gustavo Pereira'), (1008, '2026-12-31', 'Helena Santos'),
+-- (1009, '2026-12-31', 'Igor Martins'), (1010, '2026-12-31', 'Julia Ferreira');
 
 -- Insere 10 pacientes, associando cada um a um usuário e um cartão.
-INSERT INTO Paciente (nome, raca, animal, idade, sexo, id_usuario, plano) VALUES
-('Rex', 'Golden Retriever', 'Cachorro', 5, 'M', 1, 1), ('Mimi', 'Siamês', 'Gato', 3, 'F', 2, 2),
-('Thor', 'Bulldog', 'Cachorro', 2, 'M', 3, 3), ('Luna', 'Poodle', 'Cachorro', 4, 'F', 4, 4),
-('Simba', 'Persa', 'Gato', 6, 'M', 5, 5), ('Nina', 'Labrador', 'Cachorro', 1, 'F', 6, 6),
-('Apolo', 'Vira-lata', 'Cachorro', 7, 'M', 7, 7), ('Mel', 'Angorá', 'Gato', 8, 'F', 8, 8),
-('Zeus', 'Pastor Alemão', 'Cachorro', 3, 'M', 9, 9), ('Lola', 'Shih Tzu', 'Cachorro', 5, 'F', 10, 10);
+-- INSERT INTO Paciente (nome, raca, animal, idade, sexo, id_usuario, plano) VALUES
+-- ('Rex', 'Golden Retriever', 'Cachorro', 5, 'M', 1, 1), ('Mimi', 'Siamês', 'Gato', 3, 'F', 2, 2),
+-- ('Thor', 'Bulldog', 'Cachorro', 2, 'M', 3, 3), ('Luna', 'Poodle', 'Cachorro', 4, 'F', 4, 4),
+-- ('Simba', 'Persa', 'Gato', 6, 'M', 5, 5), ('Nina', 'Labrador', 'Cachorro', 1, 'F', 6, 6),
+-- ('Apolo', 'Vira-lata', 'Cachorro', 7, 'M', 7, 7), ('Mel', 'Angorá', 'Gato', 8, 'F', 8, 8),
+-- ('Zeus', 'Pastor Alemão', 'Cachorro', 3, 'M', 9, 9), ('Lola', 'Shih Tzu', 'Cachorro', 5, 'F', 10, 10);
 
 -- Insere 5 registros de pagamento para simular devedores e adimplentes.
-INSERT INTO Pagamento (servico, forma_pagamento, valor, status, data_pagamento, id_paciente) VALUES
-('Mensalidade', 'Cartão', 150.00, 's', '2025-10-01', 1),
-('Mensalidade', 'Pendente', 200.00, 'n', NULL, 3),
-('Mensalidade', 'Cartão', 100.00, 's', '2025-09-25', 5),
-('Mensalidade', 'Pendente', 250.00, 'n', NULL, 7),
-('Mensalidade', 'Cartão', 300.00, 's', '2025-10-05', 9);
-
-SELECT * FROM Pagamento;
-
-SELECT id_paciente, nome FROM Paciente;
+-- INSERT INTO Pagamento (servico, forma_pagamento, valor, status, data_pagamento, id_paciente) VALUES
+-- ('Mensalidade', 'Cartão', 150.00, 's', '2025-10-01', 1),
+-- ('Mensalidade', 'Pendente', 200.00, 'n', NULL, 3),
+-- ('Mensalidade', 'Cartão', 100.00, 's', '2025-09-25', 5),
+-- ('Mensalidade', 'Pendente', 250.00, 'n', NULL, 7),
+-- ('Mensalidade', 'Cartão', 300.00, 's', '2025-10-05', 9);
